@@ -64,4 +64,15 @@ public class KataPotterTest {
         price = kataPotter.calculePrice(books);
         assertThat(price,is(30.0));
     }
+
+    @Test
+    public void return_price_with_optimiced_discounts(){
+        int[] books = new int[]{2,2,2,1,1};
+        double price = kataPotter.calculePrice(books);
+        assertThat(price,is(15.2));
+
+        books = new int[]{5,5,4,5,4};
+        price = kataPotter.calculePrice(books);
+        assertThat(price,is(30.0));
+    }
 }
