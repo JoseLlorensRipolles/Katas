@@ -42,4 +42,23 @@ public class KataPotterTest {
         price = kataPotter.calculePrice(books);
         assertThat(price,is(8.0));
     }
+
+    @Test
+    public void return_price_with_simple_discounts(){
+        int[] books = new int[]{0,1};
+        double price = kataPotter.calculePrice(books);
+        assertThat(price,is(15.2));
+
+        books = new int[]{0,2,4};
+        price = kataPotter.calculePrice(books);
+        assertThat(price,is(21.6));
+
+        books = new int[]{0,1,2,4};
+        price = kataPotter.calculePrice(books);
+        assertThat(price,is(25.6));
+
+        books = new int[]{0,1,2,3,4};
+        price = kataPotter.calculePrice(books);
+        assertThat(price,is(30.0));
+    }
 }
