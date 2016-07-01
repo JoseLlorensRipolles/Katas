@@ -17,8 +17,16 @@ public class KataPotter {
         while(booksToSet>0){
             sets[makeSet(books)-1]++;
         }
-
+        optimize();
         return calculatePrice(sets);
+    }
+
+    private void optimize() {
+        while(sets[4]>0 && sets [2]>0){
+            sets[4]--;
+            sets[2]--;
+            sets[3]=sets[3] + 2;
+        }
     }
 
     private double calculatePrice(int[] sets) {
