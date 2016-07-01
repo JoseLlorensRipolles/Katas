@@ -12,8 +12,7 @@ public class KataPotter {
     public double calculePrice(int[] b) {
         sets = new int[5];
         books = b;
-        initSets();
-        calculateBooksToSet();
+        initVars();
         while(booksToSet>0){
             sets[makeSet(books)-1]++;
         }
@@ -39,17 +38,14 @@ public class KataPotter {
         return price;
     }
 
-    private void initSets() {
+    private void initVars() {
         for(int i = 0; i<sets.length;i++){
             sets[i] = 0;
         }
-    }
-
-    private void printSet() {
-        for(int i=0;i<sets.length;i++){
-            System.out.print(sets[i]);
+        booksToSet = 0;
+        for(int i = 0 ; i<books.length;i++){
+            booksToSet += books[i];
         }
-        System.out.println();
     }
 
     private int makeSet(int[] books) {
@@ -63,14 +59,4 @@ public class KataPotter {
         }
         return maxSetPossible;
     }
-
-    private void calculateBooksToSet() {
-        booksToSet = 0;
-        for(int i = 0 ; i<books.length;i++){
-            booksToSet += books[i];
-        }
-        ;
-    }
-
-
 }
