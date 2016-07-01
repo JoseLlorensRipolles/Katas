@@ -26,38 +26,41 @@ public class KataPotterTest {
 
     @Test
     public void return_book_price_when_one_book(){
-        int[] books = new int[]{0};
+        int[] books = new int[]{0,0,1,0,0};
         double price = kataPotter.calculePrice(books);
         assertThat(price,is(8.0));
-        books = new int[]{1};
+        books = new int[]{0,1,0,0,0};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(8.0));
-        books = new int[]{2};
+        books = new int[]{0,0,1,0,0};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(8.0));
-        books = new int[]{3};
+        books = new int[]{0,0,0,1,0};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(8.0));
-        books = new int[]{4};
+        books = new int[]{0,0,0,0,1};
+        price = kataPotter.calculePrice(books);
+        assertThat(price,is(8.0));
+        books = new int[]{0,0,0,1,0};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(8.0));
     }
 
     @Test
     public void return_price_with_simple_discounts(){
-        int[] books = new int[]{0,1};
+        int[] books = new int[]{1,1,0,0,0};
         double price = kataPotter.calculePrice(books);
         assertThat(price,is(15.2));
 
-        books = new int[]{0,2,4};
+        books = new int[]{1,0,1,0,1};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(21.6));
 
-        books = new int[]{0,1,2,4};
+        books = new int[]{1,1,1,0,1};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(25.6));
 
-        books = new int[]{0,1,2,3,4};
+        books = new int[]{1,1,1,1,1};
         price = kataPotter.calculePrice(books);
         assertThat(price,is(30.0));
     }

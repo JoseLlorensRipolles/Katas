@@ -4,7 +4,65 @@ package katapotter;
  * Created by josellorens on 1/07/16.
  */
 public class KataPotter {
-    public double calculePrice(int[] books) {
-        return books.length * 8;
+
+    int[] sets;
+    int[] books;
+    int booksToSet;
+
+    public double calculePrice(int[] b) {
+        sets = new int[5];
+        books = b;
+        initSets();
+        calculateBooksToSet();
+        while(booksToSet>0){
+            sets[makeSet(books)-1]++;
+        }
+
+        return calculatePrice(sets);
     }
+
+    private double calculatePrice(int[] sets) {
+        double price = 0.0;
+        price += sets[0]*8;
+        price += sets[1]*2*8*0.95;
+        price += sets[2]*3*8*0.90;
+        price += sets[3]*4*8*0.80;
+        price += sets[4]*5*8*0.75;
+        return price;
+    }
+
+    private void initSets() {
+        for(int i = 0; i<sets.length;i++){
+            sets[i] = 0;
+        }
+    }
+
+    private void printSet() {
+        for(int i=0;i<sets.length;i++){
+            System.out.print(sets[i]);
+        }
+        System.out.println();
+    }
+
+    private int makeSet(int[] books) {
+        int maxSetPossible = 0;
+        for (int i = 0;i<books.length;i++){
+            if(books[i]!=0){
+                maxSetPossible++;
+                books[i]--;
+                booksToSet--;
+            }
+        }
+        return maxSetPossible;
+    }
+
+    private void calculateBooksToSet() {
+        booksToSet = 0;
+        for(int i = 0 ; i<books.length;i++){
+            booksToSet += books[i];
+        }
+        ;
+    }
+
+
 }
