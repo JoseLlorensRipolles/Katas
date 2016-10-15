@@ -5,12 +5,7 @@ import org.junit.Test;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 import org.junit.Before;
-import org.junit.experimental.theories.suppliers.TestedOn;
 
-
-/**
- * Created by josellorens on 1/07/16.
- */
 public class KataPotterTest {
     KataPotter kataPotter;
 

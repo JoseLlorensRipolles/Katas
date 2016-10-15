@@ -1,5 +1,6 @@
 rootProject.name = 'Katas'
-include 'FizzBuzz'
-include 'KataPotter'
-include 'KataRange'
 
+include 'FizzBuzz'
+include 'Bowling'
+include 'RomanNumerals'
+include 'KataPotter'

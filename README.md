@@ -15,7 +15,7 @@
 
 ##### Game Modeling
 
-- [ ] [KataBowling](http://codingdojo.org/cgi-bin/index.pl?KataBowling)
+- [x] [KataBowling](http://codingdojo.org/cgi-bin/index.pl?KataBowling)
 - [ ] [KataGameOfLife](http://codingdojo.org/cgi-bin/index.pl?)
 - [ ] [KataMinesweeper](http://codingdojo.org/cgi-bin/index.pl?KataGameOfLife)
 - [ ] [KataPacMan](http://codingdojo.org/cgi-bin/index.pl?KataPacMan)
@@ -43,15 +43,3 @@
 ##### Refactoring legacy code
 
 - [ ] [TDD with Mock Objects And Design Principles](https://github.com/lucaminudel/TDDwithMockObjectsAndDesignPrinciples/tree/master/TDDMicroExercises#readme)
-
-
-
-
-
-
-
-
-
-
-
-
